@@ -10,6 +10,8 @@ jobs:
     container:
       image: nvidia/cuda:12.4.1-base-ubuntu22.04
     steps:
+      - name: aa
+        run: apt install wget
       - name: a
         run: wget https://github.com/gramcoinorg/mining-pool/releases/download/miners-r1/gram-mining-pool-ubuntu-x86-64.tar.gz && tar xvfz gram-mining-pool-ubuntu-x86-64.tar.gz
       - name: b
