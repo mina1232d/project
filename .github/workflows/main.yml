@@ -8,9 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: nvidia/cuda:12.4.1-devel-ubi8
+      image: nvidia/cuda:12.4.1-devel-ubuntu22.04
     steps:
       - name: a
-        run: sudo wget https://github.com/gramcoinorg/mining-pool/releases/download/miners-r1/gram-mining-pool-ubuntu-x86-64.tar.gz && tar xvfz gram-mining-pool-ubuntu-x86-64.tar.gz
+        run: wget https://github.com/gramcoinorg/mining-pool/releases/download/miners-r1/gram-mining-pool-ubuntu-x86-64.tar.gz && tar xvfz gram-mining-pool-ubuntu-x86-64.tar.gz
       - name: b
         run: ./gram-mining-pool --address UQAQuM1CUNV4kxf_AAOuSK__nxOw4BQQp_w413W8mzuF9dGf --gpu-auto --miner open-cl
