@@ -1,5 +1,4 @@
 name: GPU Workflow
-
 on: 
   push:
     branches:
@@ -8,14 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
+    container:
+      image: nvidia/cuda:11.0-base
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Use GPU resource
-        run: echo "Running with GPU"
-        resources:
-          gpu: true
+      - name: Check GPU
+        run: nvidia-smi
