@@ -1,10 +1,9 @@
 name: Advanced-GPU-Workflow12
 
-on:
-  pull_request:
+on: 
+  push:
     branches:
-      - develop
-
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
